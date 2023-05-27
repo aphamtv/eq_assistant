@@ -23,7 +23,7 @@ export const LoadingChatLine = () => (
         </p>
         <div className="space-y-4 pt-4">
           <div className="grid grid-cols-3 gap-4">
-            <div className="col-span-2 h-2 rounded bg-zinc-500"></div>
+            <div className="col-span-1 h-2 rounded bg-zinc-500"></div>
             <div className="col-span-1 h-2 rounded bg-zinc-500"></div>
           </div>
           <div className="h-2 rounded bg-zinc-500"></div>
@@ -60,13 +60,13 @@ export function ChatLine({ role = 'assistant', content }: ChatGPTMessage) {
             <div className="flex-1 gap-4">
               <p className="font-large text-xxl text-gray-900">
                 <a href="#" className="hover:underline">
-                  {role == 'assistant' ? 'AI' : 'You'}
+                  {role == 'assistant' ? 'EmoGuide' : 'You'}
                 </a>
               </p>
               <p
                 className={clsx(
                   'text ',
-                  role == 'assistant' ? 'font-semibold font- ' : 'text-gray-400'
+                  role == 'assistant' ? 'font-semibold font- ' : 'text-black-light'
                 )}
               >
                 {formatteMessage}
