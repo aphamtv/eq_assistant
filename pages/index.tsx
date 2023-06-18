@@ -1,5 +1,8 @@
 import { Layout, Text, Page } from '@vercel/examples-ui'
 import { Chat } from '../components/Chat'
+import Link from 'next/link';
+import React from 'react';
+
 
 function Home() {
   return (
@@ -11,12 +14,20 @@ function Home() {
         </Text>
       </section>
 
-      <section className="flex flex-col gap-3">
+      <section className="flex flex-col gap-6">
         <Text variant="h2"></Text>
-        <div className="lg:w-2/3">
+        <div className="flex flex-col gap-6">
           <Chat />
         </div>
       </section>
+
+      {/* <Link href="/disclaimer">Disclaimer</Link> */}
+      <p>Please make sure to read our 
+        <Link legacyBehavior href="/disclaimer">
+          <a className="underline" target="_blank" rel="noopener noreferrer"> Disclaimer</a>
+        </Link> before using the Emotion Guide.
+      </p>
+     
     </Page>
   )
 }
@@ -24,3 +35,5 @@ function Home() {
 Home.Layout = Layout
 
 export default Home
+
+
