@@ -23,15 +23,14 @@ const handler = async (req: Request): Promise<Response> => {
        passive-aggressive, or misunderstanding, and give the user feedback on these behaviours.\
       If you encounter ambiguous or conflicting information, please ask for more information or context \
       to better understand the situation or the emotions of the other person. This is the format of your response:\
-      Name the identified emotions and explain the reasoning behind that emotion.\
+      Name the identified emotions, explain the reasoning behind that emotion, and give suggestions on how to asnwer.\
       Give the user feedback on their responses to the person they are talking to.\
+      Give the user a helpful guidance on how to act next.\
       If the user demonstrates dismissive and emotionally unintelligent responses,\
        give them suggestions on how to diminish the damage and how to improve their relationship \
        with the person they are talking to in the future.\
-       If you encounter ambiguous or conflicting information, please ask for more information or \
-       context to better understand the situation or the emotions of the other person.\
-      Your responses are in compassionate and understanding tone."
-      `
+      In your suggestion, give me two responses to chose to answer that situation. \
+      Your responses are in compassionate and understanding tone but short and straight to the point."`
     },
   ]
   messages.push(...body?.messages)
